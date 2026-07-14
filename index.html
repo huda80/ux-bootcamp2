@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Find the Problem First — Huda Sarfraz</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --forest:      #0E2A21;
+    --forest-lift: #16382C;
+    --line:        rgba(231,237,228,.13);
+    --pale:        #E7EDE4;
+    --muted:       #8CA795;
+    --yellow:      #EBD24A;
+
+    --sans:"Inter Tight","Helvetica Neue",Arial,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--forest);
+    color:var(--pale);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+
+  .label{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin:0;
+  }
+
+  header{padding:100px 0 68px}
+  header .label{margin-bottom:24px}
+  h1{
+    font-weight:700;
+    font-size:clamp(2.6rem,7.5vw,4.6rem);
+    line-height:1;
+    letter-spacing:-.035em;
+    margin:0 0 24px;
+    text-wrap:balance;
+  }
+  h1 em{
+    font-style:normal;
+    background:linear-gradient(transparent 62%, var(--yellow) 62%, var(--yellow) 96%, transparent 96%);
+    padding:0 .04em;
+  }
+  .lede{
+    font-size:1.15rem;
+    max-width:44ch;
+    color:var(--muted);
+    margin:0;
+  }
+
+  section{padding-bottom:64px}
+  .head{
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    margin-bottom:4px;
+  }
+
+  /* decks */
+  ul{margin:0;padding:0;list-style:none}
+  .deck{
+    display:grid;
+    grid-template-columns:52px 1fr auto;
+    gap:20px;
+    align-items:center;
+    padding:22px 16px 22px 6px;
+    border-bottom:1px solid var(--line);
+    text-decoration:none;
+    color:var(--pale);
+    transition:background .16s ease, padding-left .16s ease;
+  }
+  .deck:hover,.deck:focus-visible{background:var(--forest-lift);padding-left:16px}
+  .deck .n{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--yellow)}
+  .deck .t{font-weight:600;font-size:1.08rem;letter-spacing:-.01em}
+  .deck .go{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);white-space:nowrap;
+  }
+  .deck:hover .go,.deck:focus-visible .go{color:var(--yellow)}
+  .deck--soon{pointer-events:none;opacity:.4}
+
+  /* extras */
+  .extras{margin-top:20px}
+  .extras a{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+    padding:16px 16px 16px 6px;
+    border-bottom:1px solid var(--line);
+    text-decoration:none;
+    color:var(--pale);
+    font-weight:500;
+    transition:background .16s ease, padding-left .16s ease;
+  }
+  .extras a:hover,.extras a:focus-visible{background:var(--forest-lift);padding-left:16px}
+  .extras .kind{
+    font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .extras a:hover .kind,.extras a:focus-visible .kind{color:var(--yellow)}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:36px 0 90px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 24px;
+    align-items:baseline;
+  }
+  footer .who{font-weight:600;letter-spacing:-.01em}
+  footer a{
+    font-family:var(--mono);font-size:13px;color:var(--muted);
+    text-decoration:none;border-bottom:1px solid transparent;
+    transition:color .16s ease,border-color .16s ease;
+  }
+  footer a:hover,footer a:focus-visible{color:var(--yellow);border-bottom-color:var(--yellow)}
+
+  :focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+
+  @media (max-width:560px){
+    .deck{grid-template-columns:36px 1fr;gap:12px}
+    .deck .go{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <p class="label">Huda Sarfraz - Beaconhouse National University</p>
+  <h1>The Full UX Cycle</h1>
+  <p class="lede">6 Day BootCamp</p>
+</header>
+
+<!-- SLIDE DECKS
+     Swap href="#" for your slide link.
+     When a deck is ready: delete "deck--soon" from the class, change "Soon" to "Open". -->
+<section class="wrap">
+  <p class="label head">Slide decks</p>
+  <ul>
+    <li><a class="deck" href="https://docs.google.com/presentation/d/1nNXyzHd5EJi0GfWJQrrM2FPQvfSN3d21hp0DWn1mqzo/edit?usp=sharing">
+      <span class="n">01</span><span class="t">Find the problem first</span><span class="go">Open</span>
+    </a></li>
+    <li><a class="deck deck--soon" href="#">
+      <span class="n">02</span><span class="t">Session two</span><span class="go">Soon</span>
+    </a></li>
+    <li><a class="deck deck--soon" href="#">
+      <span class="n">03</span><span class="t">Session three</span><span class="go">Soon</span>
+    </a></li>
+    <li><a class="deck deck--soon" href="#">
+      <span class="n">04</span><span class="t">Session four</span><span class="go">Soon</span>
+    </a></li>
+    <li><a class="deck deck--soon" href="#">
+      <span class="n">05</span><span class="t">Session five</span><span class="go">Soon</span>
+    </a></li>
+    <li><a class="deck deck--soon" href="#">
+      <span class="n">06</span><span class="t">Session six</span><span class="go">Soon</span>
+    </a></li>
+  </ul>
+</section>
+
+<footer class="wrap">
+    <a href="mailto:huda.sarfraz@bnu.edu.pk">huda.sarfraz@bnu.edu.pk</a>
+</footer>
+
+</body>
+</html>
